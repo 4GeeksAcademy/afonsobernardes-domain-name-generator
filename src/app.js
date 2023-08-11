@@ -7,8 +7,8 @@ import "./assets/img/4geeks.ico";
 
 const pronoun = ["the", "our"];
 const adjective = ["great", "big"];
-const noun = ["jogger", "racoon"];
-const extensions = [".com", ".net", ".us", ".io", ".racoon"];
+const noun = ["jogger", "racoon", "pepe"];
+const extensions = [".com", ".net", ".us", ".io", ".racoon", ".pe"];
 
 window.onload = function() {
   //write your code here
