@@ -8,7 +8,7 @@ import "./assets/img/4geeks.ico";
 const pronoun = ["the", "our"];
 const adjective = ["great", "big"];
 const noun = ["jogger", "racoon"];
-const extensions = [".com", ".net", ".us", ".io"];
+const extensions = [".com", ".net", ".us", ".io", ".racoon"];
 
 window.onload = function() {
   //write your code here
@@ -16,9 +16,13 @@ window.onload = function() {
   pronoun.forEach(pron => {
     adjective.forEach(adj => {
       noun.forEach(name => {
-        extensions.forEach(ext => {
-          domains += `${pron}${adj}${name}${ext}<br>`;
-        });
+        if (extensions.includes(`.${name}`)) {
+          domains += `${pron}${adj}.${name}<br>`;
+        } else {
+          extensions.forEach(ext => {
+            domains += `${pron}${adj}${name}${ext}<br>`;
+          });
+        }
       });
     });
   });
