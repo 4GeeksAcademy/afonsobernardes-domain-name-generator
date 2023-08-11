@@ -9,8 +9,9 @@ const pronoun = ["the", "our"];
 const adjective = ["great", "big"];
 const noun = ["jogger", "racoon", "pepe"];
 const extensions = [".com", ".net", ".us", ".io", ".racoon", ".pe"];
+let domains = "";
 
-function checkNameInExtensions(name, extensions) {
+function getDomains(pron, adj, name, extensions) {
   if (extensions.includes(`.${name}`)) {
     domains += `${pron}${adj}.${name}<br>`;
   } else {
@@ -23,11 +24,10 @@ function checkNameInExtensions(name, extensions) {
 
 window.onload = function() {
   //write your code here
-  let domains = "";
   pronoun.forEach(pron => {
     adjective.forEach(adj => {
       noun.forEach(name => {
-        domains = checkNameInExtensions(name, extensions);
+        domains = getDomains(pron, adj, name, extensions);
       });
     });
   });
